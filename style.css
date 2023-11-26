@@ -30,6 +30,7 @@ body{
     height:100%;
     min-height: 100vh;
     display: flex;
+    position: relative;
 }
 
 /* sidebar */
@@ -60,12 +61,12 @@ body{
 .sidebar .nav{
     background-color: rgb(227, 153, 178);
     width:50px;
-    height: 340px;
+    height: 400px;
     margin-left: 10px;
     display: flex;
     align-items:center ;
     justify-content: center;
-    clip-path: polygon(0 0,100% 0,100% 100%,0 275px,0 75px,50px 0);
+    clip-path: polygon(0 0,100% 0,100% 100%,46px 380px,44px 360px,0 310px,0 75px,44px 35px,46px 20px,50px 0);
     
 }
 .sidebar .nav ul {
@@ -109,7 +110,7 @@ body{
     
 }
 
-.hero .library  ul li:hover{
+.hero .library > ul li:hover{
    background-color: rgb(22, 2, 28);
 }
 .hero .library  ul .active{
@@ -140,7 +141,26 @@ body{
     height: 20px; 
     font-size: 15px;
 }
-  
+.library .medium{
+    margin-top: 28px;
+}
+.library .medium ul{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    gap: 15px;
+    color: black;
+    
+    font-size: 18px;
+}
+.library .medium li{
+    padding-top: 5px;
+    text-align:center;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(180deg,rgb(236, 238, 238)0%,rgb(219, 224, 226,0.7)50%,rgb(247, 245, 245,0.2)100%);
+}
 
 /* Home */
 .hero .home{
@@ -230,5 +250,148 @@ body{
 /* player */
 .hero .player{
     width:300px;
+    height: 100%;
     background-color: rgb(110, 28, 148);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:4.5px;
+}
+
+.player-top{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    width:300px;
+    justify-content: space-between;
+}
+.player-top p{
+    font-weight: 700;
+   font-size: 18px;
+}
+.playingsong {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.playingsong img{
+    width:200px;
+    height:180px;
+    border-radius: 30px;
+}
+.playingsong h4{
+    font-weight: 700;
+    font-size: 18px;
+}
+.playingsong p{
+    font-size: 15px;
+    opacity: 0.7;
+}
+.music .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.music .icons #pause{
+    padding: 10px 15px;
+    background: linear-gradient(rgb(71, 25, 75)0% ,rgb(233, 100, 211)30%,rgb(233, 100, 211)60%,rgb(71, 25, 75)100%) ;
+    border-radius: 50px;
+    border: 2px solid white ;
+}
+.queue{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: left;
+    width: 100%;
+}
+
+.queue .queuecard{
+    width: 100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color:rgb(22, 2, 28) ;
+    padding: 2px 10px;
+    border-bottom: 0.5px solid  rgb(237, 235, 235,0.5)  ;
+}
+
+.queue p:first-of-type{
+    font-weight: 600;
+   font-size: 18px;
+
+}
+
+.queuecard i{
+    padding: 6px 10px;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    font-size: 10px;
+    margin-right: 9px;
+}
+.queuecard .que-song{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.queuecard .que-song img{
+   width:35px;
+   height:35px;
+   border-radius: 10px;
+}
+.queuecard .que-song h3{
+    font-size: 14px;
+}
+.queuecard .que-song p{
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.queue #see-more{
+    background-color:rgb(22, 2, 28) ;
+   height: 40px;
+    width: 100%;
+    overflow:hidden ;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* side board music */
+.side-board {
+    width:240px ;
+    height:120px;
+    background-color:rgb(22, 2, 28) ;
+    border-radius: 20px 20px 0px 0px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:20px;
+    position: absolute;
+    bottom:0px;
+}
+.side-board audio{
+    width: 230px;
+}
+.side-board .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.side-board .icons #pause{
+    padding: 10px 15px;
+    background: linear-gradient(rgb(71, 25, 75)0% ,rgb(233, 100, 211)30%,rgb(233, 100, 211)60%,rgb(71, 25, 75)100%) ;
+    border-radius: 50px;
+    border: 2px solid white ;
 }
